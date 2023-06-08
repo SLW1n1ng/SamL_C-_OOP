@@ -1,20 +1,18 @@
 #include "Car.h"
 #include <iostream>
-using namespace std;
 
 int main() {
 	// Create a Car object
-	Car* myCar = new Car("Toyota", "Camry", 2022);//Using default constructor
-	Car defaultCar;								//Using overloaded constructor
-	Car copiedCar(*myCar);// Create a new Car object and initialize it using the copy constructor
+	Car myCar("Toyota", "Camry", 2022);	//Using overload constructor
+	Car defaultCar;									//Using default constructor
+	Car copiedCar(myCar);							// Create a copy Car object 
 
-
-	// Display Default constructor car information
-	cout << "Default Car Information:" << endl;
-	cout << "Make: " << myCar->getMake() << endl;
-	cout << "Model: " << myCar->getModel() << endl;
-	cout << "Year: " << myCar->getYear() << endl;
-	cout << endl;
+	// Display overload constructor car information
+	std::cout << "Overload Car Information:" << std::endl;
+	std::cout << "Make: " << myCar.getMake() << std::endl;
+	std::cout << "Model: " << myCar.getModel() << std::endl;
+	std::cout << "Year: " << myCar.getYear() << std::endl;
+	std::cout << std::endl;
 
 	// Display copied car information
 	std::cout << "Copied Car Information:" << std::endl;
@@ -22,32 +20,32 @@ int main() {
 	std::cout << "Model: " << copiedCar.getModel() << std::endl;
 	std::cout << "Year: " << copiedCar.getYear() << std::endl;
 	std::cout << std::endl;
-	
+
 	// Display default car information
-	cout << "Overloaded Car Information:" << endl;
-	cout << "Make: " << defaultCar.getMake() << endl;
-	cout << "Model: " << defaultCar.getModel() << endl;
-	cout << "Year: " << defaultCar.getYear() << endl;
-	cout << endl;
+	std::cout << "Default Car Information:" << std::endl;
+	std::cout << "Make: " << defaultCar.getMake() << std::endl;
+	std::cout << "Model: " << defaultCar.getModel() << std::endl;
+	std::cout << "Year: " << defaultCar.getYear() << std::endl;
+	std::cout << std::endl;
 
 	// Perform car operations
-	myCar->start();
-	myCar->accelerate();
-	myCar->stop();
+	std::cout << "Performing car operations:" << std::endl;
+	myCar.start();
+	myCar.accelerate();
+	myCar.stop();
+	std::cout << std::endl;
 
 	// Update car information
-	myCar->setMake("Honda");
-	myCar->setModel("Accord");
-	myCar->setYear(2024);
+	myCar.setMake("Honda");
+	myCar.setModel("Accord");
+	myCar.setYear(2024);
 
 	// Display updated car information
-	cout << "Updated Car Information:" << endl;
-	cout << "Make: " << myCar->getMake() << endl;
-	cout << "Model: " << myCar->getModel() << endl;
-	cout << "Year: " << myCar->getYear() << endl;
-	cout << endl;
-
-	delete myCar;   // Delete the Car object
+	std::cout << "Updated Car Information:" << std::endl;
+	std::cout << "Make: " << myCar.getMake() << std::endl;
+	std::cout << "Model: " << myCar.getModel() << std::endl;
+	std::cout << "Year: " << myCar.getYear() << std::endl;
+	std::cout << std::endl;
 
 	return 0;
 }

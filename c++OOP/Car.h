@@ -1,7 +1,6 @@
 #ifndef CAR_H		
 #define CAR_H		
-
-#include <string>	
+#include <string>									// Include string library
 
 class Car {
 
