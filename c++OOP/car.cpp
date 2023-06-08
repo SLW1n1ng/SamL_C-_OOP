@@ -5,14 +5,14 @@ Car::Car() {
 	make = "Unknown";			// If no parameters are passed, these values will be used
 	model = "Unknown";
 	year = 0;
-	std::cout << "Default constructor called" << std::endl;	
+	std::cout << "Default constructor called" << std::endl << std::endl;	
 }
 
 Car::Car(const std::string& make, const std::string& model, int year) {		// Constructor
 	this->make = make;			//this->make is the member variable, make is the parameter. 
 	this->model = model;
 	this->year = year;
-	std::cout << "Overloaded constructor called" << std::endl << std::endl;	
+	std::cout << "Overloaded constructor called" << std::endl;	
 }
 
 Car::~Car() { std::cout << "Car has been destroyed!" << std::endl; }		// Destructor
