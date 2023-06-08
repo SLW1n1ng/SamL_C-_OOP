@@ -17,6 +17,13 @@ Car::Car(const std::string& make, const std::string& model, int year) {		// Cons
 
 Car::~Car() { std::cout << "Car has been destroyed!" << std::endl; }		// Destructor
 
+Car::Car(const Car& car) {													// Copy constructor
+	this->make = car.make;
+	this->model = car.model;
+	this->year = car.year;
+	std::cout << "Copy constructor called" << std::endl << std::endl;
+}
+
 // Getters 
 std::string Car::getMake() const { return make; }							// Getter
 std::string Car::getModel() const { return model; }							// Getter

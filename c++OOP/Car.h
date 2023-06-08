@@ -14,6 +14,7 @@ public:												// Public access specifier
 	Car();											// Default constructor
 	Car(const std::string& make, const std::string& model, int year); // Constructor
 	~Car();											// Destructor
+	Car(const Car& car);							// Copy constructor
 
 	// Getters and setters
 	std::string getMake() const;					// Getter. Accessor

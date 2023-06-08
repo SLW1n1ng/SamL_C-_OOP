@@ -6,6 +6,8 @@ int main() {
 	// Create a Car object
 	Car* myCar = new Car("Toyota", "Camry", 2022);//Using default constructor
 	Car defaultCar;								//Using overloaded constructor
+	Car copiedCar(*myCar);// Create a new Car object and initialize it using the copy constructor
+
 
 	// Display Default constructor car information
 	cout << "Default Car Information:" << endl;
@@ -14,6 +16,13 @@ int main() {
 	cout << "Year: " << myCar->getYear() << endl;
 	cout << endl;
 
+	// Display copied car information
+	std::cout << "Copied Car Information:" << std::endl;
+	std::cout << "Make: " << copiedCar.getMake() << std::endl;
+	std::cout << "Model: " << copiedCar.getModel() << std::endl;
+	std::cout << "Year: " << copiedCar.getYear() << std::endl;
+	std::cout << std::endl;
+	
 	// Display default car information
 	cout << "Overloaded Car Information:" << endl;
 	cout << "Make: " << defaultCar.getMake() << endl;
